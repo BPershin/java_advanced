@@ -12,7 +12,7 @@ public class CalculatorTest {
 
      @Test
     public void AdditionWithoutPoint() {
-        Assert.assertEquals(3.0,calc.makeCalculation(1,2,'+'),0);
+        Assert.assertEquals(3,calc.makeCalculation(1,2,'+'),0);
     }
     @Test public void AdditionWithPoint() {
         Assert.assertEquals(3.1,calc.makeCalculation(3.0,0.1,'+'),0);
