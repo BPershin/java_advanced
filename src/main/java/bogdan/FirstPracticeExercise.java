@@ -18,7 +18,7 @@ public class FirstPracticeExercise {
      */
     public static float GetNumber() {
         System.out.println("Введите число: ");
-        float number = 0;
+        float number;
         if (scanner.hasNextFloat()) {
             number = scanner.nextFloat();
         } else {

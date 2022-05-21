@@ -52,9 +52,7 @@ public class SecondPracticeExercise {
                     break;
                 }
                 default:
-                    System.out.println("Оператор не распознан, попробуйте еще раз!");
-                    operator = GetOperator();
-                    break;
+
             }
         }
         return operator;
