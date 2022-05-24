@@ -3,8 +3,6 @@ import Calc_new.ValueListener;
 import org.junit.Assert;
 import org.junit.Test;
 
-import static jdk.nashorn.internal.objects.Global.Infinity;
-
 public class CalculatorTest {
      Calculator calc = new Calculator();
      ValueListener valueListener = new ValueListener();
@@ -36,6 +34,7 @@ public class CalculatorTest {
         Assert.assertEquals(0.24,calc.makeCalculation(0.12,0.5,'/'),0);
     }
     @Test public void divByZero() {
-        Assert.assertEquals(Infinity,calc.makeCalculation(0.13,0,'/'),0);
+        Assert.assertEquals(1,calc.makeCalculation(0.13,0,'/'),0);
     }
+
 }
