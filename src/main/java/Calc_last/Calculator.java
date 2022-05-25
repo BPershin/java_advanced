@@ -4,6 +4,7 @@ public class Calculator {
     double left;
     double right;
     char operator;
+
     public Calculator(double left, double right, char operator) {
         super();
         this.left = left;

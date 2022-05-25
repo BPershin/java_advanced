@@ -1,5 +1,6 @@
 import Calc_last.Calculator;
 import Calc_last.NumsListener;
+import Calc_last.OperatorListener;
 import com.sun.org.glassfish.gmbal.Description;
 import org.junit.Assert;
 import org.junit.Test;
@@ -25,6 +26,19 @@ public class Calc_last_test {
         assertThrows(Exception.class,
                 () -> {
                     userInput.getNumber();
+                });
+    }
+
+    @Test
+    @Description("Бросает исключение, когда мы вводим невалидный оператор")
+    public void exceptionShouldBeThrownWhenOperatorNotValid() {
+        ByteArrayInputStream inputStream = new ByteArrayInputStream("%".getBytes());
+        ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
+        PrintStream ps = new PrintStream(byteArrayOutputStream);
+        OperatorListener operatorListener = new OperatorListener(inputStream,ps);
+        assertThrows(IllegalArgumentException.class,
+                () -> {
+                   operatorListener.GetOperator();
                 });
     }
 
